@@ -6,17 +6,21 @@ import org.junit.Test;
 
 public class StudentTest {
 
+    /*
+    * We suppose there should be a student object
+    * which cat accept the name as the input of the constructor,
+    * then we can get the name of the student after create the student object.
+    * */
 	@Test
 	public void testCreate() {
-		Student student = new Student("Jane Doe");
-		String studentName = student.getName();
-		assertEquals("Jane Doe", studentName);
+	    final String nameOfJane = "Jane Doe";
+	    final String nameOfMary = "Mary Brown";
 
-		Student student2 = new Student("Mary");
-		String studentName2 = student2.getName();
-		assertEquals("Mary", studentName2);
+		Student jane = new Student(nameOfJane);
+		assertEquals(nameOfJane, jane.getName());
 
-		assertEquals("Jane Doe", student.getName());
+		Student mary = new Student(nameOfMary);
+		assertEquals(nameOfMary, mary.getName());
 	}
 	
 	@Test
