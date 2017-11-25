@@ -7,8 +7,16 @@ import org.junit.Test;
 public class StudentTest {
 
 	@Test
-	public void testCreate(){
-		
+	public void testCreate() {
+		Student student = new Student("Jane Doe");
+		String studentName = student.getName();
+		assertEquals("Jane Doe", studentName);
+
+		Student student2 = new Student("Mary");
+		String studentName2 = student2.getName();
+		assertEquals("Mary", studentName2);
+
+		assertEquals("Jane Doe", student.getName());
 	}
 	
 	@Test
