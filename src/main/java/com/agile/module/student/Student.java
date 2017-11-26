@@ -2,8 +2,8 @@ package com.agile.module.student;
 
 public class Student {
 
-    private String myName;
-
+    // instance variable (class level variable)
+    private String name;
 
     // Constructor, by default, it's invisible.
     public Student() {
@@ -12,10 +12,15 @@ public class Student {
 
     // Constructor with one String type parameter.
     public Student(String name) {
-        myName = name;
+        this.name = name;
     }
+
     public String getName() {
-        return myName;
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }
